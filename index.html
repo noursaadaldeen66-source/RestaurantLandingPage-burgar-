@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgerto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+    />
+  </head>
+  <!--    ........ -->
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#home" class="logo"><div class="logo">Burgerto</div></a>
+        <nav>
+            <!-- Logo and navigation -->
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+        <a href="#delivery" class="btn-order">Order Now</a>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+          <!-- Hero image and CTA -->
+      <video autoplay muted loop id="heroVideo">
+        <source src="img/video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Welcome to Burgerto</h1>
+          <p>
+            Enjoy the juiciest burgers made with fresh ingredients and bold
+            flavors.
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn">Explore Menu</a>
+            <a
+              href="#reservation-modal"
+              class="btn btn-video"
+              onclick="openModal()"
+              >Book a Table</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="hot-deals">
+      <div class="container">
+        <div class="deal-content">
+          <h2>Hot Deals</h2>
+          
+          <h3>SPECIAL COMBO PACK</h3>
+          <p>Burger Bizz Fries & Drinks</p>
+          <p class="deal-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vid doe
+            nisi quis nostrud exercitation ullamco dolore magna aliqua. Duis
+            aute irure
+          </p>
+          <a href="#order" class="btn-deal">Order Now</a>
+        </div>
+        <div class="deal-image">
+          <img
+            src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80"
+            alt="Special Combo Pack"
+          />
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="special-dishes" id="specials">
+       <!-- Featured dishes -->
+      <div class="container">
+        <h2>Our Special Dishes</h2>
+        <div class="dishes-grid">
+          <div class="dish-card">
+            <img
+              src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
+              alt="Classic Burger"
+            />
+            <h3>Classic Burger</h3>
+            <p>Juicy beef patty with lettuce, tomato, and cheese.</p>
+            <span class="price">$12</span>
+          </div>
+          <div class="dish-card">
+            <img
+              src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="BBQ Burger"
+            />
+            <h3>BBQ Burger</h3>
+            <p>Smoky BBQ sauce with onion rings and bacon.</p>
+            <span class="price">$15</span>
+          </div>
+          <div class="dish-card">
+            <img
+              src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Cheese Fries"
+            />
+            <h3>Cheese Fries</h3>
+            <p>Crispy fries with melted cheese and chili.</p>
+            <span class="price">$8</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about" id="about">
+         <!-- Restaurant story -->
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="about-wrapper">
+          <div class="about-text">
+            <p>
+              Founded in 2015, Burger Haven brings you the best burgers with
+              fresh, locally sourced ingredients and family recipes passed down
+              for generations.
+            </p>
+            <ul>
+              <li>Fresh daily ingredients</li>
+              <li>Family recipes</li>
+              <li>Welcoming vibe</li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="/img/chef.jpg" alt="Chef Photo" class="chef-photo" />
+          </div>
+
+    </section>
+
+  
+    <section class="menu-preview" id="menu">
+         <!-- Menu items -->
+      <div class="container">
+        <h2>Menu Preview</h2>
+        <div class="tabs">
+          <button class="tab-btn active" onclick="openTab('starters')">
+            Starters
+          </button>
+          <button class="tab-btn" onclick="openTab('mains')">Mains</button>
+          <button class="tab-btn" onclick="openTab('desserts')">
+            Desserts
+          </button>
+        </div>
+        <div id="starters" class="tab-content active">
+          <div class="menu-grid">
+            <div class="menu-item">Onion Rings - $6</div>
+            <div class="menu-item">Mozzarella Sticks - $7</div>
+            <div class="menu-item">Nachos - $9</div>
+          </div>
+        </div>
+        <div id="mains" class="tab-content">
+          <div class="menu-grid">
+            <div class="menu-item">Classic Burger - $12</div>
+            <div class="menu-item">Veggie Burger - $10</div>
+            <div class="menu-item">BBQ Burger - $15</div>
+          </div>
+        </div>
+        <div id="desserts" class="tab-content">
+          <div class="menu-grid">
+            <div class="menu-item">Milkshake - $5</div>
+            <div class="menu-item">Brownie - $4</div>
+            <div class="menu-item">Ice Cream Sundae - $6</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+    <section class="delivery" id="delivery">
+      <div class="container">
+        <h2>Order Delivery</h2>
+        <p>Get your burgers delivered hot and fresh within 30 minutes.</p>
+        <form class="delivery-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="text" placeholder="Address" required />
+          <input type="tel" placeholder="Phone Number" required />
+          <textarea placeholder="Special Instructions" rows="3"></textarea>
+          <button type="submit">Place Order</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="food-gallery">
+      <div class="container">
+        <h2>Food Gallery</h2>
+        <div class="gallery-grid">
+          <img
+            src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
+            alt="Burger 1"
+            onclick=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="Burger 2"
+            onclick=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80"
+            alt="Burger 3"
+            onclick=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="Fries"
+            onclick=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+            alt="Milkshake"
+            onclick=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="Dessert"
+            onclick=""
+          />
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Customer A"
+            />
+            <div class="stars">★★★★★</div>
+            <p>"Best burgers in town! The BBQ one is a must-try."</p>
+          </div>
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Customer B"
+            />
+            <div class="stars">★★★★☆</div>
+            <p>"Quick delivery and delicious food. Highly recommend!"</p>
+          </div>
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/22.jpg"
+              alt="Customer C"
+            />
+            <div class="stars">★★★★★</div>
+            <p>"Friendly staff and amazing flavors. Family favorite!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Contact information -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p>Address: Damscus, Sha3lan</p>
+            <p>Hours: 24\7</p>
+            <p>Phone: +963</p>
+           
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+
+    </section>
+
+    
+    <div id="reservation-modal" class="modal">
+         <!-- Customer reviews -->
+      <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Reserve a Table</h2>
+
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="date" required />
+          <input type="time" required />
+          <input type="number" placeholder="Number of People" required />
+          <button type="submit">Reserve</button>
+        </form>
+      </div>
+    </div>
+
+   
+    <footer class="footer">
+      <!-- Footer content -->
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Burgereto</h3>
+            <p>Serving delicious burgers since 2015.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Burgerto. @All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
